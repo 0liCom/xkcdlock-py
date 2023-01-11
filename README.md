@@ -4,7 +4,6 @@ A reimagination of the [xkcdlock](https://github.com/bbusse/xkcdlock) in Python.
 This is a wrapper around a locking program (swaylock or i3lock) to display an XKCD comic on the lock screen.
 Depending on the mode of choice, the program will download and display the latest, a random or a specific XKCD comic.
 The program uses a specified directory to cache images and will fallback to an already downloaded image when no internet connection can be established.
-To display the title 
 
 ## Features
 
@@ -56,14 +55,14 @@ The modes are:
 
 * `latest`: The program will download and display the latest comic of the day
 * `random`: The program will choose a random comic to download
-* `index`: The program will downlaod the comic with the number given by the option `-i INDEX`
+* `index`: The program will download the comic with the number given by the option `-i INDEX`
 
 Further options you may want to specify are:
 
 * `-d DIR`: Give a directory which should be used to cache data and export the generated background images. If this is not given, the program will use `/tmp/xkcdlock` as default.
 * `-l LOCK`: Specify the locking program (by default `swaylock`). Any locking binary can be given, it should support the calling conventions of i3lock, with the options `-u`, `-s`, and `-i`. Currently, only swaylock and i3lock are supported.
-* `-c COOLDOWN`: If a cooldown in the format `HH:MM` is given, the program will not attemt any new HTTP-requests to the XKCD website until the cooldown period has elapsed after the latest download. Instead, the cached data will exclusively be used to display an image. The cooldown will be ignored, if no cached data is available.
-* `-f MODE`: Select a mode which will be used when no internet connection can be established. For example, you may want to display the latest image when the internet connection is available, but display a random image when ther is no internet connection. To achieve this, use mode `latest` as positional argument and fallback mod `-f random` as an option.
+* `-c COOLDOWN`: If a cooldown in the format `HH:MM` is given, the program will not attempt any new HTTP-requests to the XKCD website until the cooldown period has elapsed after the latest download. Instead, the cached data will exclusively be used to display an image. The cooldown will be ignored, if no cached data is available.
+* `-f MODE`: Select a mode which will be used when no internet connection can be established. For example, you may want to display the latest image when the internet connection is available, but display a random image when there is no internet connection. To achieve this, use mode `latest` as positional argument and fallback mod `-f random` as an option.
 * `-i INDEX`: The index for index mode.
 * `-o`: Enable offline mode, no connections to the internet will be made.
 * `-v`: Enable verbose logging.
