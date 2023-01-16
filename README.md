@@ -5,6 +5,8 @@ This is a wrapper around a locking program (swaylock or i3lock) to display an XK
 Depending on the mode of choice, the program will download and display the latest, a random or a specific XKCD comic.
 The program uses a specified directory to cache images and will fallback to an already downloaded image when no internet connection can be established.
 
+![Preview](preview.png)
+
 ## Features
 
 * Displays the XKCD comic, title and caption on the lock screen as background
